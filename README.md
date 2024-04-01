@@ -37,7 +37,7 @@ If you haven't specified yc-token nor yc-service-account-key-file it will try to
 
 - `--yandex-cloud-id`: Cloud ID
 - `--yandex-cores`: Count of virtual CPUs
-- `--yandex-gpus`: Count of virtual GPUs
+- `--yandex-gpus`: Count of virtual GPUs (Highly recommend use with image family "container-optimized-image-gpu")
 - `--yandex-core-fraction`: Core fraction
 - `--yandex-disk-size`: Disk size in gigabytes
 - `--yandex-disk-type`: Disk type, e.g. 'network-hdd'
