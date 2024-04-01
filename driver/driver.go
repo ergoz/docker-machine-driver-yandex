@@ -60,7 +60,7 @@ type Driver struct {
 }
 
 const (
-	defaultGpus		 = 0
+	defaultGpus			 = 0
 	defaultCores         = 2
 	defaultCoreFraction  = 100
 	defaultDiskSize      = 20
