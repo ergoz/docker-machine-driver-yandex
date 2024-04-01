@@ -79,7 +79,7 @@ func NewDriver() drivers.Driver {
 	return &Driver{
 		BaseDriver:    &drivers.BaseDriver{},
 		Cores:         defaultCores,
-		Gpus:			defaultGpus,
+		Gpus:		defaultGpus,
 		DiskSize:      defaultDiskSize,
 		DiskType:      defaultDiskType,
 		ImageFolderID: defaultImageFolderID,
