@@ -1,9 +1,12 @@
 # This is an example .goreleaser.yml file with some sane defaults.
 # Make sure to check the documentation at http://goreleaser.com
+version: 2
+
 before:
   hooks:
     # this is just an example and not a requirement for provider building/publishing
     - go mod tidy
+
 builds:
   - env:
       - CGO_ENABLED=0
@@ -26,17 +29,21 @@ builds:
       - goos: windows
         goarch: arm64
     binary: '{{ .ProjectName }}'
+
 archives:
   - format: tar.gz # default
     name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
     format_overrides:
       - goos: windows
         format: zip
+
 checksum:
   name_template: '{{ .ProjectName }}_{{ .Version }}_SHA256SUMS'
   algorithm: sha256
+
 release:
 # If you want to manually examine the release before its live, uncomment this line:
  draft: true
-changelog:
-  skip: false
+
+#changelog:
+#  skip: false
